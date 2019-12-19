@@ -9,8 +9,8 @@ pipeline {
         }
         stage('Build and Publish Docker Image'){
                     steps {
-                        sh 'docker build -t levitech/blueimage -f Blue-Green-Deployment/blue/Dockerfile blue-green/blue'
-                        sh 'docker build -t levitech/greenimage -f Blue-Green-Deployment/green/Dockerfile blue-green/green'
+                        sh 'docker build -t levitech/blueimage -f Blue-Green-Deployment/blue/Dockerfile Blue-Green-Deployment/blue'
+                        sh 'docker build -t levitech/greenimage -f Blue-Green-Deployment/green/Dockerfile Blue-Green-Deployment/green'
                         sh 'docker push levitech/blueimage'
                         sh 'docker push levitech/greenimage'
                         sh 'docker rmi -f levitech/greenimage'
