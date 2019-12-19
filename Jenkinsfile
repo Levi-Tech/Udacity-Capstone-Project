@@ -11,12 +11,12 @@ pipeline {
         }
         stage('Build and Publish Docker Image'){
                     steps {
-                        sh 'docker build -t herreraluis/blueimage -f blue-green/blue/Dockerfile blue-green/blue'
-                        sh 'docker build -t herreraluis/greenimage -f blue-green/green/Dockerfile blue-green/green'
-                        sh 'docker push herreraluis/blueimage'
-                        sh 'docker push herreraluis/greenimage'
-                        sh 'docker rmi -f herreraluis/greenimage'
-                        sh 'docker rmi -f herreraluis/blueimage'
+                        sh 'docker build -t levitech/blueimage -f blue-green/blue/Dockerfile blue-green/blue'
+                        sh 'docker build -t levitech/greenimage -f blue-green/green/Dockerfile blue-green/green'
+                        sh 'docker push levitech/blueimage'
+                        sh 'docker push levitech/greenimage'
+                        sh 'docker rmi -f levitech/greenimage'
+                        sh 'docker rmi -f levitech/blueimage'
                     }
                 }
     }
