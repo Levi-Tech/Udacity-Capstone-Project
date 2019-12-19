@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Lint HTML & Dockerfile'){
             steps {
-                sh 'tidy -q -e blue-green/blue/*.html'
+                sh 'tidy -q -e Blue-Green-Deloyment/blue/*.html'
                 sh 'tidy -q -e blue-green/green/*.html'
                 sh 'hadolint blue-green/blue/Dockerfile'
                 sh 'hadolint blue-green/green/Dockerfile'
