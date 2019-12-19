@@ -5,6 +5,12 @@ pipeline {
             steps {
                 sh 'tidy -q -e Blue-Green-Deployment/blue/*.html'
                 sh 'tidy -q -e Blue-Green-Deployment/green/*.html'
+        
+        stage("Linting Dockerfile") {
+            /* Lint the Dockerfile with Hadolint */
+          echo 'Linting...'
+          sh '/home/linuxbrew/.linuxbrew/bin/hadolint Dockerfile'
+        }
  
             }
         }
