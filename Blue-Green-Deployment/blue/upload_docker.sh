@@ -6,13 +6,13 @@
 # Step 1:
 # Create dockerpath
 # dockerpath=<your docker ID/path>
-dockerpath=testblueimage
+dockerpath=blueimage
 
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
 docker login --username levitech
-docker tag testblueimage levitech/testblueimage
+docker tag blueimage levitech/blueimage
 # Step 3:
 # Push image to a docker repository
-docker push levitech/testblueimage
+docker push levitech/blueimage
