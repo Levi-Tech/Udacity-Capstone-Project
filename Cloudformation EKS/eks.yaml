@@ -1,0 +1,21 @@
+Description: >
+    Capstone project for Cloud DevOps Engineering Nanodegree
+Parameters:
+  EnvironmentName:
+    Description: An Environment name that will be prefixed to resources
+    Type: String
+Resources:
+  CapstoneEKS:
+    Type: AWS::EKS::Cluster
+    Properties:
+      Name: bluegreen
+      Version: '1.13'
+      RoleArn: arn:aws:iam::442837381365:role/eks
+      ResourcesVpcConfig:
+        SecurityGroupIds:
+        -  sg-01cf820c15250dc68
+        SubnetIds:
+          - subnet-0b592e1ebe6074671
+          - subnet-0677f100a2b72d62f
+          - subnet-019ae1e6962d34d51
+          - subnet-0cf52f3c8376cf597
