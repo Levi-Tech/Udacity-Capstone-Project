@@ -22,7 +22,7 @@
             "containers":[
                {
                   "name":"blue",
-                  "image":"levitech/blueimage",
+                  "image":"levitech/blueimage:latest",
                   "ports":[
                      {
                         "name":"http-server",
