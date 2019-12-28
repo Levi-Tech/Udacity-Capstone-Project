@@ -4,6 +4,11 @@ AWS Blue and Green Deployment using Kubernetes Service and Docker and Jenkins
 2. getting the right requirment to launch your pipeline included a Jenkinsfile and Dockerfile
 3. running your service using kubernetes and docker. Configure kubernete and Docker to sussucessfully deploy your service.
 
+# Git Repository URL 
+
+```
+https://github.com/Levi-Tech/Udacity-Capstone-Project
+```
 # Spin up cluster
 
 ```
