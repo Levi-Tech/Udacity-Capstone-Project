@@ -18,5 +18,13 @@ pipeline {
                         sh 'docker rmi -f  levitech/blueimage'
                     }
                 }
+        stage('blue/green deployment'){
+            steps{
+                sh 'kubectl apply -f ./blue-controller.json'
+                sh 'kubectl apply -f ./green-controller.json'
+                sh 'kubectl apply -f ./blue-green-service.json'
+            }
+        }    
+            
     }
 }
