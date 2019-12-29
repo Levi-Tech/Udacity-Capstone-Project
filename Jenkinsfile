@@ -19,7 +19,7 @@ pipeline {
                     }
                 }
         stage('blue/green deployment'){
-            steps{
+            steps {
                 sh 'kubectl apply -f ./blue-controller.json'
                 sh 'kubectl apply -f ./green-controller.json'
                 sh 'kubectl apply -f ./blue-green-service.json'
