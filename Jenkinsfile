@@ -23,6 +23,7 @@ pipeline {
                 sh 'kubectl apply -f ./blue-controller.json'
                 sh 'kubectl apply -f ./green-controller.json'
                 sh 'kubectl apply -f ./blue-green-service.json'
+                sh 'kubectl apply -f ./blue-service.json'
             }
         }    
             
